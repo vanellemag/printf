@@ -16,10 +16,10 @@ int (*getfunc(char a))(va_list)
 		{"i", printi},
 		{NULL, NULL}
 	};
-	while (arr[i] -> val)
+	while (arr[i]->val)
 	{
-		if (a == arr[i] -> val[0])
-			return (*arr[i].ap);
+		if (a == arr[i]->val[0])
+			return ((*arr[i]).ap);
 		i++;
 	}
 	return (NULL);

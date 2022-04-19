@@ -54,7 +54,6 @@ int printper(va_list args)
 /**
  * printd - prints decimal
  * @args: decimal
- * @int: int
  * Return: counter
  */
 int printd(va_list args)

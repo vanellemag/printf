@@ -2,7 +2,8 @@
 #define _MAIN_H_
 #include <stdio.h>
 #include <stdarg.h>
-/** specific - struct
+/**
+ *struct specific - struct
  * @val: char
  * @ap: int
  *
@@ -11,7 +12,7 @@ typedef struct specific
 {
 	char *val;
 	int (*ap)(va_list);
-}spc;
+} spc;
 int _printf(const char *format, ...);
 int prints(va_list args);
 int printc(va_list args);

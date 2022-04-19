@@ -13,7 +13,6 @@ int _printf(const char *format, ...)
 	if (format != NULL)
 	{
 		int co = 0, i;
-		int (*f)(va_list);
 		va_list args;
 
 		va_start(args, format);
@@ -31,14 +30,8 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					f = getfunct(format[i]);
-					if (f)
-						co += f(args);
-					else
-					{
-						co = putchar(format[i]) + putchar(format[i + 1]);
-						i += 2;
-					}
+					co = putchar(format[i]) + putchar(format[i + 1]);
+					i += 2;
 				}
 			}
 			else
